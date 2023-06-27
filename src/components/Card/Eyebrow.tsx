@@ -4,7 +4,7 @@ import { ElementType, ReactNode } from 'react';
 interface Props {
     as?: ElementType;
     decorate?: boolean;
-    className: string;
+    className?: string;
     children: ReactNode;
 }
 

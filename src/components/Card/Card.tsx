@@ -8,7 +8,7 @@ import { Description as InternalDescription } from './Description';
 
 interface Props {
     as?: ElementType;
-    className: string;
+    className?: string;
     children: ReactNode;
 }
 
