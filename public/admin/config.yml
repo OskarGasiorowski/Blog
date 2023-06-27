@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   repo: OskarGasiorowski/Blog
 media_folder: static/img
+publish_mode: editorial_workflow
 collections:
     - name: "blog"
       label: "Blog"
