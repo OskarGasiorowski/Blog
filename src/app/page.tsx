@@ -44,8 +44,8 @@ export default function Home() {
                     </div>
                     <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
                         <div className="flex flex-col gap-16">
-                            {[].map((article) => (
-                                <Card as="article">
+                            {[].map((article, index) => (
+                                <Card key={index} as="article">
                                     <Card.Title>
                                         <Card.Link href="/">Title</Card.Link>
                                     </Card.Title>
