@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { GitHubIcon, LinkedInIcon } from '#icons';
+import { IconLink } from '#components';
 
 export default function Home() {
     return (
@@ -25,22 +25,20 @@ export default function Home() {
                                 augue, blandit et dapibus in, condimentum id orci.
                             </p>
                             <div className="mt-6 flex gap-6">
-                                <Link
+                                <IconLink
                                     href="https://github.com/OskarGasiorowski"
                                     className="group -m-1 p-1"
                                     aria-label="Follow on GitHub"
                                     target="_blank"
-                                >
-                                    <GitHubIcon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
-                                </Link>
-                                <Link
+                                    icon={GitHubIcon}
+                                />
+                                <IconLink
                                     href="https://www.linkedin.com/in/oskar-gasiorowski/"
                                     className="group -m-1 p-1"
                                     aria-label="Follow on LinkedIn"
                                     target="_blank"
-                                >
-                                    <LinkedInIcon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
-                                </Link>
+                                    icon={LinkedInIcon}
+                                />
                             </div>
                         </div>
                     </div>

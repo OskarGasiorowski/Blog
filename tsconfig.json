@@ -21,7 +21,8 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "#icons": ["src/icons"]
+      "#icons": ["src/icons"],
+      "#components": ["src/components"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
