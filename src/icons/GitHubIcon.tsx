@@ -1,4 +1,4 @@
-import { SVGProps } from 'react';
+import {SVGProps} from 'react';
 
 export function GitHubIcon(props: SVGProps<any>) {
     return (
@@ -11,3 +11,4 @@ export function GitHubIcon(props: SVGProps<any>) {
         </svg>
     );
 }
+

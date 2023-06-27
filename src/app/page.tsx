@@ -42,8 +42,30 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
+                    <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+                        <div className="flex flex-col gap-16">
+                            {articles.map((article) => (
+                                <Article key={article.slug} article={article} />
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
     );
+}
+
+function Article({ article }: any) {
+    return (
+        <Card as="article">
+            <Card.Title href={`/articles/${article.slug}`}>
+                {article.title}
+            </Card.Title>
+            <Card.Eyebrow as="time" dateTime={article.date} decorate>
+                {formatDate(article.date)}
+            </Card.Eyebrow>
+            <Card.Description>{article.description}</Card.Description>
+            <Card.Cta>Read article</Card.Cta>
+        </Card>
+    )
 }
