@@ -45,9 +45,9 @@ export default async function Home() {
                 <div className="mt-16 max-w-xl">
                     <div className="flex flex-col gap-16">
                         {postListResponse.data.postConnection.edges?.map((edge) => (
-                            <Card key={edge?.node?.title} as="article">
+                            <Card key={edge?.node?._sys.filename} as="article">
                                 <Card.Title>
-                                    <Card.Link href="/">{edge?.node?.title}</Card.Link>
+                                    <Card.Link href={edge?.node?._sys.filename || ''}>{edge?.node?.title}</Card.Link>
                                 </Card.Title>
                                 <Card.Eyebrow as="time" decorate>
                                     {edge?.node?.createdAt}
